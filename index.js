@@ -17,10 +17,10 @@
     import dotenv from 'dotenv';
     dotenv.config({path: 'variables.env' });
 
-// Conectar a la Base de Datos
-    // db.authenticate()
-    //     .then(() => console.log('Base de datos conectada'))
-    //     .catch(error => console.log(error));
+// Autenticar la Base de Datos
+    db.authenticate()
+        .then(() => console.log('Base de datos conectada'))
+        .catch(error => console.log(error));
     // try {
     //     await db.authenticate();
     //     console.log('Connection has been established successfully.');
