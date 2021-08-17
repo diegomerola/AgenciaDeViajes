@@ -2,7 +2,7 @@
 import { Testimonial } from '../models/Testimoniales.js';
 
 // Variables
-// const er = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const er = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 
 const guardarTestimonial = async (req, res) => {
@@ -19,9 +19,9 @@ const guardarTestimonial = async (req, res) => {
     if (correo.trim() === '') {
         errores.push({ mensaje: 'El correo esta vacio' });
     }
-    // else if(!er.test(correo)){
-    //     errores.push({ mensaje: 'Ingrese un mail correcto' });
-    // }
+    else if(!er.test(correo)){
+        errores.push({ mensaje: 'Ingrese un mail correcto' });
+    }
     if (mensaje.trim() === '') {
         errores.push({ mensaje: 'El mensaje esta vacio' });
     }
