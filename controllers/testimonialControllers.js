@@ -51,13 +51,12 @@ const guardarTestimonial = async (req, res) => {
                 mensaje
             })
             console.log(nombre);
-            console.log(correo)
-            console.log(mensaje)
+            console.log(correo);
+            console.log(mensaje);
             res.redirect('/testimoniales')
             
         } catch (error) {
-            console.log(error)
-            
+            console.log(error)        
         }
     }
 

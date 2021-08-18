@@ -21,15 +21,8 @@
     db.authenticate()
         .then(() => console.log('Base de datos conectada'))
         .catch(error => console.log(error));
-    // try {
-    //     await db.authenticate();
-    //     console.log('Connection has been established successfully.');
-    //   } catch (error) {
-    //     console.error('Unable to connect to the database:', error);
-    //   }
 
-// Metodos de app:
-    
+// Metodos de app:  
     // Crear variables en el ambito local y pasarlas hacia las vistas
     app.use('/', (req,res,next)=>{
         // Obtener el anio actual
@@ -63,4 +56,4 @@
     // Establecer conexion con el servidor:
     app.listen(PORT , HOST, () =>{  
         console.log(`El servidor esta funcionando en host:${HOST} y puerto:${PORT}`);
-    })
+    });
